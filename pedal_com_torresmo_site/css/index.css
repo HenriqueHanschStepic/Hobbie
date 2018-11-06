@@ -1,0 +1,417 @@
+	/* Padrão */
+
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, 
+	big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, 
+	dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, 
+	aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, 
+	summary, time, mark, audio, video {
+		margin: 0; /*Margem em 0*/
+		padding: 0; /*Distanciamento em 0*/
+		border: 0; /*Bordas em 0*/
+		/*font-size: 100%;*/ 
+		font: inherit; /*Tamanho de fonte padrão*/
+		font-family: "Georgia", "Arial"; /*Fonte a serem usadas (se não for Georgia é Arial)*/
+		vertical-align: baseline; /*Alinhamento da fonte na página (Default)*/
+		text-decoration: none; /*Decoração em Links (Nenhuma)*/
+		letter-spacing: 2px; /*Espaçamento entre letras*/
+	}
+	
+	/*Header*/
+	
+	#header {
+		/*color:black;*//*Indiferente*/
+		cursor: default; /*Tipo de cursor (Default)*/
+		height: 3.25em; /*Distância da parte de cima*/
+		left: 0; /*Distância lateral esquerda*/
+		line-height: 3.25em; /*Altura das linhas do Header*/
+		position: absolute; /*Posição do Header (Absolute: eu falo onde ele é pra ficar e ponto.)*/
+		text-align: right; /*Alinhamento dos ultimos 3 itens (Direita)*/
+		top: 2em; /*Distância da parte de cima*/
+		width: 100%; /*Ocupar a largura total da página*/
+		z-index: 10001; /*Ficar atrás de todos os itens*/
+	}
+
+		#header .inner {
+			margin: 0 auto; /*Distanciamento das bordas*/
+			position: relative; /*Posicionamento relativo (Depende de outros)*/
+		}
+
+		#header .logo { /* Canto superior esquedo (Vulgo Pedal com Torresmo)*/
+			display: inline-block; /*Blocos de informações*/
+			font-weight: 600; /*Peso da fonte*/
+			height: inherit; /*Altura padrão*/
+			left: 0; /*Posicionamento das informações (Esquerda no canto do inner)*/
+			line-height: inherit; /*Altura das linhas padrão (Descrito no topo)*/
+			margin: 0; /*Margem em 0*/
+			padding: 0; /*Distanciamento entre itens 0*/
+			position: absolute; /*Eu falo onde eu quero que ele fique*/
+			top: 0; /*Altura da logo*/
+			font-size: 1.2em; /*Tamanho da fonte (1.2em = 19px)*/
+			
+			/*Caso for uma imagem, essas são as configurações*/
+			height: 100px;/*Tamanho da imagem*/
+			border: 2px solid black/*Bordas da imagem*/
+		}
+
+		#header a { /* Links do canto superior direito */
+			display: inline-block; /*Criação de navegação horizontal*/
+			padding: 0 0.75em; /*Distanciamento entre os links*/
+			color: inherit; /*Cor padrão*/
+			text-decoration: none; /*Decoração dos links = nenhuma*/
+			font-size: 0.8em; /*Tamanho da fonte*/
+		}
+
+			#header a:hover { /*Ao passar o mouse por cima troca de cor*/
+				color: #666666; /*Cor da informação ao passar o mouse por cima*/
+			}
+
+			#header a:last-child { /*Distanciamento direito da ultima informação*/
+				padding-right: 0; /*Distanciamento da direita em 0*/
+			}
+			
+	/* Inner*/
+	
+	.inner { /*Distanciamento das bordas do site*/
+		margin: 0 auto; /*Margem em 0 centralizando automaticamente*/
+		max-width: 70em; /*Largura máxima (70em = 1120px)*/
+	}
+		
+	/* Banner */
+
+	#banner {/*Imagem principal do site*/
+		padding: 12em 0 8em 0; /*Posicionamento do banner na página*/
+		background-image: url(../img/banner.jpg); /*Imagem*/
+		background-size: cover; /*Cobrir o banner inteiro*/
+		background-position: top; /*Onde a imagem começa (Funciona somente com o comando Fixed no de baixo)*/
+		background-attachment: fixed; /*Posicionamento da imagem*/
+		background-repeat: no-repeat; /*Não repetir a imagem*/
+		text-align: center; /*Alinhamento das informações no centro do banner*/
+		border-top: 0.5em solid #800000; /*Borda superior*/
+		border-bottom:  0.5em solid #800000; /*Borda Inferior*/
+		margin-bottom: -2em; /*Distância do item de baixo*/
+	}
+
+		#banner h1 { /*Informação principal*/
+			font-size: 3.5em; /*Tamanho da fonte*/
+			font-weight: 100; /*"Peso" da fonte*/
+			color:; /*Caso queira trocar a cor (Padrão = preto)*/
+			line-height: 1em; /*Distância entre as linhas*/
+			margin: 0 0 0.5em 0; /*Margem*/
+			padding: 0; /*Distanciamento = 0*/
+		}
+
+		#banner p { /*Segunda informação do banner*/
+			font-size: 1em; /*Tamanho da fonte*/
+			color:; /*Caso queira trocar a cor (Padrão = preto)*/
+			margin-bottom: 1.75em; /*Margem inferior*/
+		}
+		
+	#titulomeio{ /*Título da primeira parte*/
+		text-align:center; /*Posicionamento = Centralizado*/
+		font-weight: bold; /*Estilo da fonte = Negrito*/
+		font-size: 1.5em; /*Tamanho da fonte*/
+		margin-bottom: 2em; /*Margem inferior*/
+		margin-top: 1em; /*Margem superior*/
+	}
+		
+	/* One */
+	
+	section.wrapper, article.wrapper { /*Informações do Conteúdo*/
+		padding: 4em 0; /*Distanciamento superior*/
+	}
+
+		section.wrapper header, article.wrapper header { /*Two*/
+			margin-bottom: 4em; /*Margem inferior*/
+		}
+		section.wrapper article header, article.wrapper article header { /*Título dos Artigos*/
+			margin-bottom: 1em; /*Margem inferior*/
+			font-weight: bold; /*"Peso da fonte"*/
+		}
+		section.wrapper article p, article.wrapper p{ /*Informações dos Artigos*/
+			line-height:25px; /*Distanciamento entre as linhas*/
+		}
+		section.wrapper article footer, article.wrapper footer{ /*Link "Mais"*/
+			margin-top: 0.3em; /*Margem superior*/
+		}
+
+		section.wrapper.style1, article.wrapper.style1 { /*Two*/
+			background-color: #800000; /*Cor de fundo*/
+			color: black; /*Cor da fonte*/
+		}
+		
+	#titulomembros{ /*Título dos membros*/
+		font-weight: bold; /*"Peso" da fonte*/
+		font-size: 1.3em; /*Tamanho da fonte*/
+	}
+	
+	.imagesredes{ /*Imagem das redes sociais de cada participante do grupo*/
+		height: 1.2em; /*Altura*/
+		width: 1.2em; /*Largura*/
+		margin-left: 1px; /*Margem esquerda*/
+		position: relative;
+	}
+	
+	.botao{ /*"Botão" dos links (Mais)*/
+		font-weight: bold; /*"Peso da fonte"*/
+		color: black; /*Cor da fonte*/
+	}
+	
+		a.botao:hover{ /*Trocar a cor do "Botão"*/
+			color: #800000; /*Cor do "Botão"*/
+		}
+		
+	.imagesarticle{/*Imagens dos artigos*/
+		margin-left: 0em;
+		border-top: 1px solid #737373; 
+	}
+	
+	/* Flex */
+
+	.flex { /*Tabela padrão do site*/
+		display: -ms-flexbox; /**/
+		-ms-flex-wrap: wrap; /**/
+		-ms-flex-pack: justify; /**/
+		display: -moz-flex; /**/
+		display: -webkit-flex; /**/
+		display: -ms-flex; /**/
+		display: flex; /**/
+		-moz-flex-wrap: wrap; /**/
+		-webkit-flex-wrap: wrap; /**/
+		-ms-flex-wrap: wrap; /**/
+		flex-wrap: wrap; /**/
+		-moz-justify-content: space-between; /**/
+		-webkit-justify-content: space-between; /**/
+		-ms-justify-content: space-between; /**/
+		justify-content: space-between; /**/
+	}
+
+		.flex.flex-2 article { /**/
+			width: 47%; /**/
+		}
+
+		.flex.flex-3 article { /**/
+			position: relative; /**/
+			width: 28%; /**/
+			margin-bottom: -5em; /**/
+		}
+
+			.flex.flex-3 article:before { /**/
+				content: ''; /**/
+				position: absolute; /**/
+				width: 100%; /**/
+				height: 100%; /**/
+				right: -2em; /**/
+				top: 0; /**/
+				border-right: 1px solid #737373; /**/
+				pointer-events: none; /**/
+			}
+
+			.flex.flex-3 article:last-child:before { /**/
+				border: none ; /**/
+			}
+
+		.flex.flex-4 .box { /**/
+			width: 15%; /**/
+		}
+		
+	/* Box */
+
+	.box { /**/
+		border: solid 1px #dbdbdb; /**/
+		margin-bottom: 2em; /**/
+		padding: 1.5em; /**/
+	}
+
+		.box > :last-child, /**/
+		.box > :last-child > :last-child, /**/
+		.box > :last-child > :last-child > :last-child { /**/
+			margin-bottom: 0; /**/
+		}
+
+		.box.alt { /**/
+			border: 0; /**/
+			border-radius: 0; /**/
+			padding: 0; /**/
+		}
+
+		.box.person { /**/
+			border: solid 2px #4d4d4d; /**/
+			padding: 3em 1.5em; /**/
+		}
+
+			.box.person h3 { /**/
+				margin: 0; /**/
+			}
+
+			.box.person .image { /**/
+				margin-bottom: 1em; /**/
+			}
+
+				.box.person .image img { /**/
+					max-width: 100%; /**/
+				}
+				
+	/* Image */
+
+	.image { /**/
+		border-radius: 0; /**/
+		border: 0; /**/
+		display: inline-block; /**/
+		position: relative; /**/
+		height:150px; /**/
+		width:150px; /**/
+	}
+
+		.image img { /**/
+			border-radius: 0; /**/
+			display: block; /**/
+		}
+
+		.image.left, .image.right { /**/
+			max-width: 40%; /**/
+		}
+
+			.image.left img, .image.right img { /**/
+				width: 100%; /**/
+			}
+
+		.image.round img { /**/
+			border-radius: 100%; /**/
+			margin-left:0em; /**/
+		}
+
+		.image.left { /**/
+			float: left; /**/
+			padding: 0 1.5em 1em 0; /**/
+			top: 0.25em; /**/
+		}
+
+		.image.right { /**/
+			float: right; /**/
+			padding: 0 0 1em 1.5em; /**/
+			top: 0.25em; /**/
+		}
+
+		.image.fit { /**/
+			display: block; /**/
+			margin: 0 0 2em 0; /**/
+			width: 100%; /**/
+		}
+
+			.image.fit img { /**/
+				width: 100%; /**/
+			}
+
+		.image.main { /**/
+			display: block; /**/
+			margin: 0 0 3em 0; /**/
+			width: 100%; /**/
+		}
+
+			.image.main img { /**/
+				width: 100%; /**/
+			}
+	
+	/*Inf Equipe*/
+		
+		.flexx { /*Tabela padrão do site*/
+		display: -ms-flexbox; /**/
+		-ms-flex-wrap: wrap; /**/
+		-ms-flex-pack: justify; /**/
+		display: -moz-flex; /**/
+		display: -webkit-flex; /**/
+		display: -ms-flex; /**/
+		display: flex; /**/
+		-moz-flex-wrap: wrap; /**/
+		-webkit-flex-wrap: wrap; /**/
+		-ms-flex-wrap: wrap; /**/
+		flex-wrap: wrap; /**/
+		-moz-justify-content: space-between; /**/
+		-webkit-justify-content: space-between; /**/
+		-ms-justify-content: space-between; /**/
+		justify-content: space-between; /**/
+	}
+
+		.flexx.flexx-2 article { /**/
+			width: 47%; /**/
+		}
+
+		.flexx.flexx-3 article { /**/
+			position: relative; /**/
+			width: 28%; /**/
+			margin-bottom: 2em; /**/
+		}
+
+			.flexx.flexx-3 article:before { /**/
+				content: ''; /**/
+				position: absolute; /**/
+				width: 100%; /**/
+				height: 100%; /**/
+				right: -2em; /**/
+				top: 0; /**/
+				border-right: 1px solid #737373; /**/
+				pointer-events: none; /**/
+			}
+
+			.flexx.flexx-3 article:last-child:before { /**/
+				border: none ; /**/
+			}
+				
+		section.special, article.special { /* Two */
+		text-align: center; /*Alinhar ao centro*/
+		margin-top: 4em; /*Margem superior*/
+	}
+
+	section.wrapper2, article.wrapper2 { /*Informações do Conteúdo*/
+		padding: 2em 0; /*Distanciamento superior*/
+	}
+
+		section.wrapper2 header, article.wrapper2 header { /*Two*/
+			margin-bottom: 4em; /*Margem inferior*/
+		}
+		
+		section.wrapper2 article header, article.wrapper2 article header { /*Título dos Artigos*/
+			margin-bottom: 1em; /*Margem inferior*/
+			font-weight: bold; /*"Peso da fonte"*/
+		}
+		
+		section.wrapper2 article p, article.wrapper2 p{ /*Informações dos Artigos*/
+			line-height:25px; /*Distanciamento entre as linhas*/
+		}
+		
+		section.wrapper2 article footer, article.wrapper2 footer{ /*Link "Mais"*/
+			margin-top: 0.3em; /*Margem superior*/
+		}
+
+		section.wrapper2.style1, article.wrapper2.style1 { /*Two*/
+			background-color: #800000; /*Cor de fundo*/
+			color: black; /*Cor da fonte*/
+		}
+		
+	img{ /*Logo "Pedal com Torresmo"*/
+		margin-left: 1.5em; /*Margem esquerda*/
+		padding-top: 1em; /*Distanciamento superior*/
+	}
+	
+	#titulomeio2{ /*Título da primeira parte*/
+		text-align:center; /*Posicionamento = Centralizado*/
+		font-weight: bold; /*Estilo da fonte = Negrito*/
+		font-size: 1.5em; /*Tamanho da fonte*/
+		margin-bottom: 2em; /*Margem inferior*/
+		margin-top: 0em; /*Margem superior*/
+	}
+	.imagesredes2{ /*Imagem das redes socias do grupo*/
+		height: 2em; /*Altura*/
+		width: 2em; /*Largura*/
+		margin-left: 0em; /*Margem esquerda*/
+		padding-left: 1em; /*Distanciamento esquerdo*/
+	}
+	
+	/*Footer*/
+	
+	#foots{
+		height: 1.2em;
+		background-color: #800000;
+		text-align: center;
+	}
+			
